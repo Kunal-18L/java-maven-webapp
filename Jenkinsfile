@@ -58,5 +58,17 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh '''
+                ssh -o StrictHostKeyChecking=no -i ~/aws-linux.pem ubuntu@3.110.88.62 << '
+                cd ~/devops-automation/kubernetes
+                kubectl apply -f deployment.yml
+                kubectl apply -f service.yaml
+                '
+                '''
+            }
+        }
     }
 }
