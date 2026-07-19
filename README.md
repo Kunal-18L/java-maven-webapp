@@ -95,17 +95,6 @@ The Docker image can be deployed to Kubernetes using the deployment and service 
 
 ---
 
-## 📸 Screenshots
-
-Add screenshots of:
-
-- Jenkins successful pipeline
-- SonarQube analysis
-- Docker image build
-- Running application
-
----
-
 ## 👨‍💻 Author
 
 **Karan**
